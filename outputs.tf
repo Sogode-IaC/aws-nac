@@ -235,6 +235,7 @@ output "ue2_r_ipv4_default_id" {
 # #   value = module.ew1_spoke_foov1.tga_id
 # # }
 # # 
+# # waa
 # # output "ew1_spoke_foov1_r_id" {
 # #   value = module.ew1_spoke_foov1.r_id
 # # }
