@@ -163,80 +163,82 @@ output "ue2_r_ipv4_default_id" {
   value = module.ue2_tgw.r_ipv4_default_id
 }
 
-# #
-# # Stage 2
-# 
-# #
-# # bb_ew1 outputs
-# output "ew1_bb_routes" {
-#   value = {
-#     for idx, route in module.ew1_bb.routes : idx => {
-#       id                     = route.id
-#       destination_cidr_block = route.destination_cidr_block
-#     }
-#   }
-# }
-# 
-# #
-# # bb_ue2 outputs
-# output "ue2_bb_routes" {
-#   value = {
-#     for idx, route in module.ue2_bb.routes : idx => {
-#       id                     = route.id
-#       destination_cidr_block = route.destination_cidr_block
-#     }
-#   }
-# }
-# 
-# # #
-# # # Stage 3
-# # 
-# # #
-# # # ew1_spoke_foov1 outputs
-# # output "ew1_spoke_foov1_vpc_id" {
-# #   value = module.ew1_spoke_foov1.vpc_id
-# # }
-# # 
-# # output "ew1_spoke_foov1_vpc_cidr" {
-# #   value = module.ew1_spoke_foov1.vpc_cidr
-# # }
-# # 
-# # output "ew1_spoke_foov1_main_route_table_id" {
-# #   value = module.ew1_spoke_foov1.main_route_table_id
-# # }
-# # 
-# # output "ew1_spoke_foov1_default_route_table_id" {
-# #   value = module.ew1_spoke_foov1.default_route_table_id
-# # }
-# # 
-# # output "ew1_spoke_foov1_default_network_acl_id" {
-# #   value = module.ew1_spoke_foov1.default_network_acl_id
-# # }
-# # 
-# # output "ew1_spoke_foov1_default_security_group_id" {
-# #   value = module.ew1_spoke_foov1.default_security_group_id
-# # }
-# # 
-# # output "ew1_spoke_foov1_subnets" {
-# #   value = {
-# #     for idx, subnet in module.ew1_spoke_foov1.subnets : idx => {
-# #       id                = subnet.id
-# #       cidr_block        = subnet.cidr_block
-# #       vpc_id            = subnet.vpc_id
-# #       availability_zone = subnet.availability_zone
-# #       description       = subnet.description
-# #       ipam_id           = subnet.ipam_id
-# #       scope             = subnet.scope
-# #     }
-# #   }
-# # }
-# # 
-# # output "ew1_spoke_foov1_tga_id" {
-# #   value = module.ew1_spoke_foov1.tga_id
-# # }
-# # 
-# # waa
-# # output "ew1_spoke_foov1_r_id" {
-# #   value = module.ew1_spoke_foov1.r_id
-# # }
-# # 
+/*
+#
+# Stage 2
+
+#
+# bb_ew1 outputs
+output "ew1_bb_routes" {
+  value = {
+    for idx, route in module.ew1_bb.routes : idx => {
+      id                     = route.id
+      destination_cidr_block = route.destination_cidr_block
+    }
+  }
+}
+
+#
+# bb_ue2 outputs
+output "ue2_bb_routes" {
+  value = {
+    for idx, route in module.ue2_bb.routes : idx => {
+      id                     = route.id
+      destination_cidr_block = route.destination_cidr_block
+    }
+  }
+}
+*/
+
+/*
+#
+# Stage 3
+
+#
+# ew1_spoke_foov1 outputs
+output "ew1_spoke_foov1_vpc_id" {
+  value = module.ew1_spoke_foov1.vpc_id
+}
+
+output "ew1_spoke_foov1_vpc_cidr" {
+  value = module.ew1_spoke_foov1.vpc_cidr
+}
+
+output "ew1_spoke_foov1_main_route_table_id" {
+  value = module.ew1_spoke_foov1.main_route_table_id
+}
+
+output "ew1_spoke_foov1_default_route_table_id" {
+  value = module.ew1_spoke_foov1.default_route_table_id
+}
+
+output "ew1_spoke_foov1_default_network_acl_id" {
+  value = module.ew1_spoke_foov1.default_network_acl_id
+}
+
+output "ew1_spoke_foov1_default_security_group_id" {
+  value = module.ew1_spoke_foov1.default_security_group_id
+}
+
+output "ew1_spoke_foov1_subnets" {
+  value = {
+    for idx, subnet in module.ew1_spoke_foov1.subnets : idx => {
+      id                = subnet.id
+      cidr_block        = subnet.cidr_block
+      vpc_id            = subnet.vpc_id
+      availability_zone = subnet.availability_zone
+      description       = subnet.description
+      ipam_id           = subnet.ipam_id
+      scope             = subnet.scope
+    }
+  }
+}
+
+output "ew1_spoke_foov1_tga_id" {
+  value = module.ew1_spoke_foov1.tga_id
+}
+
+output "ew1_spoke_foov1_r_id" {
+  value = module.ew1_spoke_foov1.r_id
+}
+*/
